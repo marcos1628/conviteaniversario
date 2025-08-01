@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aniversário da Rosimeire</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #fffef2, #f5e9ff);
+      color: #333;
+      text-align: center;
+    }
+
+    /* Imagem de fundo */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('imagempc.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -2;
+    }
+
+    @media (max-width: 768px) {
+      body::before {
+        background-image: url('imagemcelular.png');
+      }
+    }
+
+    header {
+      padding: 60px 20px 30px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.2em;
+      color: #5d00a3;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5em;
+      color: #b8009e;
+    }
+
+    .mensagem {
+      font-size: 1.1rem;
+      margin: 0 10px 40px;
+      color: #555;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      backdrop-filter: blur(10px);
+      border: 2px solid #ffffff44;
+      border-radius: 12px;
+      padding: 30px 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .info-box {
+      margin-bottom: 25px;
+      padding: 20px;
+      border: 2px dashed #c85fff;
+      border-radius: 10px;
+      background-color: #fff5ffbb;
+    }
+
+    .info-box strong {
+      color: #7b00a5;
+    }
+
+    a.btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 20px;
+      background-color: #d600d6;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    a.btn:hover {
+      background-color: #aa00aa;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    .fogos {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="fogos">
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.10.4/dist/index.umd.min.js"></script>
+    <canvas id="fireworks"></canvas>
+    <script>
+      const container = document.querySelector(".fogos");
+      const canvas = document.getElementById("fireworks");
+      const fireworks = new Fireworks.default(container, { canvas });
+      fireworks.start();
+    </script>
+  </div>
+
+  <header>
+    <h1>Rosimeire 44</h1>
+    <h2>Réveillon Antecipado 🎉</h2>
+    <p class="mensagem">Você está convidado para uma noite especial com festa, alegria, e muita energia boa para celebrar o novo ciclo da Rosimeire! ✨</p>
+  </header>
+
+  <div class="container">
+    <div class="info-box">
+      <p><strong>Tema:</strong> Réveillon</p>
+      <p><strong>Vestimenta:</strong> Branco, short, chinelo ou como você se sentir bem 🌟</p>
+    </div>
+
+    <div class="info-box">
+      <p><strong>Data:</strong> Sábado, 20 de Setembro</p>
+      <p><strong>Horário:</strong> 20h30</p>
+      <p><strong>Local:</strong> Espaço Beija Flor</p>
+      <a class="btn" href="https://maps.app.goo.gl/W5izKdGvDtz5bMC5A">📍 Ver no Google Maps</a>
+    </div>
+
+    <div class="info-box">
+      <p><strong>Confirme sua presença até:</strong> 15 de Setembro</p>
+      <a class="btn" href="https://wa.me/5564999547683?text=Confirmo%20minha%20presen%C3%A7a%20e%20mais%20X%20pessoa(s)%20da%20fam%C3%ADlia!">✅ Confirmar via WhatsApp</a>
+    </div>
+
+    <div class="info-box">
+      <p>🎁 Seu carinho é o melhor presente!</p>
+      <a class="btn" href="pix.html">💸 Ver chave Pix</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 - Aniversário Rosimeire | Site criado com carinho ✨</p>
+  </footer>
+</body>
+
+</html>

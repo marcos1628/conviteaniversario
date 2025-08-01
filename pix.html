@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contribuição por Pix</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-image: url('imagempc.png');
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+
+    @media (max-width: 768px) {
+      body::before {
+        background-image: url('imagemcelular.png');
+      }
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 90%;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .pix-key {
+      font-size: 22px;
+      font-weight: bold;
+      background-color: #fff;
+      color: #000;
+      padding: 12px;
+      border-radius: 8px;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    button {
+      font-size: 16px;
+      padding: 10px 20px;
+      border: none;
+      background-color: #ffd700;
+      color: #000;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #fff08a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Contribuição via Pix 🎁</h1>
+    <p>Se desejar contribuir com a festa da Rosimeire, use a chave Pix abaixo:</p>
+    <div class="pix-key" id="pixKey">99000024153</div><br>
+    <button onclick="copiarPix()">Copiar Chave Pix</button>
+  </div>
+
+  <script>
+    function copiarPix() {
+      const chave = document.getElementById("pixKey").innerText;
+      navigator.clipboard.writeText(chave).then(() => {
+        alert("Chave Pix copiada com sucesso!");
+      });
+    }
+  </script>
+</body>
+</html>

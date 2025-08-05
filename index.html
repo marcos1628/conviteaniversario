@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <p></p>
   <title>Aniversário da Rosimeire</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
@@ -13,6 +13,17 @@
       background: linear-gradient(to bottom, #fffef2, #f5e9ff);
       color: #333;
       text-align: center;
+    }
+
+    /* Imagem no topo */
+    .logo-topo {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 270px; /* Tamanho da imagem */
+      height: auto;
+      z-index: 1; /* Fica acima do fundo */
     }
 
     /* Imagem de fundo */
@@ -37,25 +48,25 @@
     }
 
     header {
-      padding: 60px 20px 30px;
+      padding: 240px 20px 30px; /* espaço extra no topo */
     }
 
     h1 {
       font-size: 3rem;
       margin-bottom: 0.2em;
-      color: #5d00a3;
+      color: #ffffff;
     }
 
     h2 {
       font-size: 1.6rem;
       margin-bottom: 0.5em;
-      color: #b8009e;
+      color: #ffffff;
     }
 
     .mensagem {
       font-size: 1.1rem;
       margin: 0 10px 40px;
-      color: #555;
+      color: #ffffff;
     }
 
     .container {
@@ -115,6 +126,9 @@
 </head>
 
 <body>
+  <!-- Imagem centralizada no topo -->
+  <img src="imagem_redonda_otimizada.png" alt="Imagem Redonda" class="logo-topo">
+
   <div class="fogos">
     <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.10.4/dist/index.umd.min.js"></script>
     <canvas id="fireworks"></canvas>
@@ -129,7 +143,9 @@
   <header>
     <h1>Rosimeire 44</h1>
     <h2>Réveillon Antecipado 🎉</h2>
-    <p class="mensagem">Você está convidado para uma noite especial com festa, alegria, e muita energia boa para celebrar o novo ciclo da Rosimeire! ✨</p>
+    <p class="mensagem">
+      Você está convidado para uma noite especial com festa, alegria, e muita energia boa para celebrar o novo ciclo da Rosimeire! ✨
+    </p>
   </header>
 
   <div class="container">
@@ -142,6 +158,7 @@
       <p><strong>Data:</strong> Sábado, 20 de Setembro</p>
       <p><strong>Horário:</strong> 20h30</p>
       <p><strong>Local:</strong> Espaço Beija Flor</p>
+      <p><strong>Endereço:</strong> Rua c 7 quadra 34 lote 05 - Parque do cedro, Mineiros - GO</p>
       <a class="btn" href="https://maps.app.goo.gl/W5izKdGvDtz5bMC5A">📍 Ver no Google Maps</a>
     </div>
 
@@ -152,13 +169,12 @@
 
     <div class="info-box">
       <p>🎁 Seu carinho é o melhor presente!</p>
-      <a class="btn" href="pix.html">💸 Ver chave Pix</a>
+      <a class="btn" href="pix.html"> Presentes </a>
     </div>
   </div>
 
   <footer>
-    <p>© 2025 - Aniversário Rosimeire | Site criado com carinho ✨</p>
+    <p>© 2025 - Aniversário Rosimeire</p>
   </footer>
 </body>
-
 </html>

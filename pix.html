@@ -19,6 +19,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
     }
 
     body::before {
@@ -40,6 +41,16 @@
       }
     }
 
+    .logo-topo {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 270px;
+      height: auto;
+      z-index: 1;
+    }
+
     .container {
       background-color: rgba(0, 0, 0, 0.6);
       padding: 30px;
@@ -48,6 +59,7 @@
       box-shadow: 0 0 20px rgba(0,0,0,0.4);
       position: relative;
       z-index: 1;
+      margin-top: 50px; /* Espaço para a imagem */
     }
 
     h1 {
@@ -69,6 +81,12 @@
       border-radius: 8px;
       display: inline-block;
       margin-bottom: 15px;
+    }
+
+    .pix-key span {
+      font-weight: normal;
+      font-size: 16px;
+      margin-left: 8px;
     }
 
     button {
@@ -99,6 +117,9 @@
   </style>
 </head>
 <body>
+  <!-- Imagem no topo central -->
+  <img src="imagem_redonda_2_otimizada.png" alt="Imagem da Rosimeire" class="logo-topo">
+
   <!-- Fogos de artifício -->
   <div class="fogos">
     <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.10.4/dist/index.umd.min.js"></script>
@@ -114,14 +135,16 @@
   <div class="container">
     <h1>Presente via Pix 🎁</h1>
     <p>Se quiser demonstrar seu carinho com um presente, a chave Pix está logo abaixo:</p>
-    <div class="pix-key" id="pixKey">99000024153</div><br>
+    <div class="pix-key" id="pixKey">
+      99000024153 <span>(CPF)</span>
+    </div><br>
     <button onclick="copiarPix()">Copiar Chave Pix</button>
   </div>
 
   <script>
     function copiarPix() {
       const chave = document.getElementById("pixKey").innerText;
-      navigator.clipboard.writeText(chave).then(() => {
+      navigator.clipboard.writeText("99000024153").then(() => {
         alert("Chave Pix copiada com sucesso!");
       });
     }

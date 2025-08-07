@@ -31,7 +31,7 @@
       background-image: url('imagempc.png');
       background-size: cover;
       background-position: center;
-      z-index: -1;
+      z-index: -2;
     }
 
     @media (max-width: 768px) {
@@ -46,6 +46,8 @@
       border-radius: 20px;
       max-width: 90%;
       box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      position: relative;
+      z-index: 1;
     }
 
     h1 {
@@ -84,13 +86,35 @@
     button:hover {
       background-color: #fff08a;
     }
+
+    .fogos {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
   </style>
 </head>
 <body>
+  <!-- Fogos de artifício -->
+  <div class="fogos">
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.10.4/dist/index.umd.min.js"></script>
+    <canvas id="fireworks"></canvas>
+    <script>
+      const container = document.querySelector(".fogos");
+      const canvas = document.getElementById("fireworks");
+      const fireworks = new Fireworks.default(container, { canvas });
+      fireworks.start();
+    </script>
+  </div>
+
   <div class="container">
     <h1>Presente via Pix 🎁</h1>
     <p>Se quiser demonstrar seu carinho com um presente, a chave Pix está logo abaixo:</p>
-    <div class="pix-key"   id="pixKey">99000024153</div><br>
+    <div class="pix-key" id="pixKey">99000024153</div><br>
     <button onclick="copiarPix()">Copiar Chave Pix</button>
   </div>
 
